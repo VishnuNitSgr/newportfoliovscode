@@ -1,0 +1,93 @@
+.card {
+  background: var(--article-bg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  padding: 1rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.content p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1rem;
+}
+
+.tags span {
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1.5px solid currentColor;
+  color: inherit;
+  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.25s ease, box-shadow 0.2s ease;
+}
+
+.tags span:hover {
+  opacity: 1;
+  background: currentColor;
+  color: #000;
+  box-shadow: 0 0 8px currentColor, 0 0 12px currentColor;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.underline {
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(
+    120deg,
+    var(--accent-color) 100%,
+    var(--accent-color) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.underline:hover {
+  background-size: 100% 88%;
+}
+
+/* Tech tag colors */
+.react { border-color: #61dafb; color: #61dafb; }
+.node { border-color: #68a063; color: #68a063; }
+.mongodb { border-color: #4db33d; color: #4db33d; }
+.tailwind { border-color: #38bdf8; color: #38bdf8; }
+.next { border-color: #ffffff; color: #ffffff; }
+.material-ui { border-color: #007fff; color: #007fff; }
+.css-modules { border-color: #9333ea; color: #9333ea; }
+
+/* Special tags (with spaces converted to hyphens in className) */
+.jwt-authentication { border-color: #f59e0b; color: #f59e0b; }
+.otp-authentication { border-color: #ef4444; color: #ef4444; }
+.socket-io { border-color: #facc15; color: #facc15; }
+.webrtc { border-color: #22c55e; color: #22c55e; }
+
+.tags span {
+  transition: all 0.25s ease, box-shadow 0.2s ease;
+}

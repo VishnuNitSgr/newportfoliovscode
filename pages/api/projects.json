@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Mess-Management Platform",
+    "image": "/assets/mess_management.png",
+    "description": "A full-stack web app for managing mess operations.",
+    "tags": ["react", "node", "mongodb", "tailwind","jwt authentication","otp authentication"],
+    "source_code": "https://github.com/VishnuNitSgr/mess_management_platform",
+    "demo": "https://messplateform.netlify.app/"
+  },
+  {
+    "id": 2,
+    "name": "Pokedocs",
+    "image": "/assets/pokedocs.png",
+    "description": "A pokemon encyclopedia built with React and Material-UI, utilizing the PokeAPI to fetch and display comprehensive information about various Pokémon species.",
+    "tags": ["react", "material-ui"],
+    "source_code": "https://github.com/VishnuNitSgr/pokedocs",
+    "demo": "https://pokedocss.vercel.app/"
+  },
+  {
+    "id": 3,
+    "name": "collabCode",
+    "image": "/assets/cs.png",
+    "description": "A real time collaborative code editor built with React, Node.js, and Socket.IO. It allows multiple users to edit code simultaneously, making it ideal for pair programming and team collaboration.",
+    "tags": ["react", "node","socket.io","webrtc"],
+    "source_code": "https://github.com/VishnuNitSgr/collabCode",
+    "demo": "https://codepapaya.netlify.app/"
+  },
+  {
+    "id": 4,
+    "name": "VSCode Portfolio",
+    "image": "/assets/recode.png",
+    "description": "A ai based project guess the time complexity of the code snippet.",
+    "tags": ["next", "css-modules"],
+    "source_code": "https://github.com/VishnuNitSgr/recode",
+    "demo": "https://github.com/VishnuNitSgr/recode"
+  }
+]
