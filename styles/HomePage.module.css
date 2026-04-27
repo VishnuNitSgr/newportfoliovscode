@@ -6,6 +6,7 @@
   height: 75vh;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 
 .background {
@@ -104,6 +105,8 @@
 .illustration {
   height: 500px;
   width: 460px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* 4K Screens */
@@ -156,7 +159,7 @@
   .illustration {
     position: absolute;
     bottom: -50px;
-    right: 0;
+    right: -50px;
     height: 700px;
     width: 600px;
   }
@@ -211,7 +214,7 @@
   .illustration {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -30px;
     width: 75vw;
     height: 50vh;
     z-index: 1;
