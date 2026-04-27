@@ -1,34 +1,73 @@
 .sidebar {
-  background: var(--sidebar-bg);
+  background: linear-gradient(180deg, #0f172a, #020617);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 4.5vw;
-  min-width: 40px;
+  min-width: 50px;
   height: calc(100vh - 30px - 25px);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .iconContainer {
   cursor: pointer;
   width: 100%;
+  position: relative;
+  transition: all 0.25s ease;
 }
 
 .iconContainer:hover {
-  background: var(--sidebar-hover-bg);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+}
+
+.iconContainer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 3px;
+  background: transparent;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.iconContainer:hover::before {
+  background: rgba(99, 102, 241, 0.6);
 }
 
 .active {
-  border-left: 2px solid var(--accent-color);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.active::before {
+  background: linear-gradient(180deg, #6366f1, #22c55e);
+  box-shadow: 0 0 10px #6366f1;
 }
 
 .icon {
   height: 48px;
   width: 48px;
-  padding: 0.65rem 0;
+  padding: 0.7rem 0;
   display: block;
   margin: 0 auto;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
+.iconContainer:hover .icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.6));
+}
+
+/* 🔥 subtle floating effect */
+.iconContainer:active .icon {
+  transform: scale(0.95);
+}
+
+/* Responsive stays mostly same */
 @media screen and (min-width: 2000px) {
   .sidebar {
     width: 2.5vw;
@@ -46,9 +85,8 @@
     width: 8vw;
   }
   .icon {
-    height: 48px;
-    width: 48px;
-    padding: 0.6rem;
+    height: 44px;
+    width: 44px;
   }
 }
 
@@ -57,8 +95,7 @@
     width: 10vw;
   }
   .icon {
-    height: 40px;
-    width: 40px;
-    padding: 0.6rem;
+    height: 38px;
+    width: 38px;
   }
 }
