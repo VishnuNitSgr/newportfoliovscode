@@ -8,18 +8,21 @@ export default async function handler(req, res) {
 
   try {
     await connectDB();
+    console.log("✅ MongoDB Connected");
 
     const { name, email, subject, message } = req.body;
+    console.log("BODY:", req.body);
 
     if (!name || !email || !message) {
       return res.status(400).json({ msg: "All fields required" });
     }
 
-    await Contact.create({ name, email, subject, message });
+    const saved = await Contact.create({ name, email, subject, message });
+    console.log("SAVED:", saved);
 
     res.status(201).json({ msg: "Saved successfully ✅" });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ msg: "Error saving data" });
+    console.error("🔥 FULL ERROR:", error);
+    res.status(500).json({ msg: error.message });
   }
 }

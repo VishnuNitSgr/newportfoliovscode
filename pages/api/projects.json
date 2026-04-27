@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "VSCode Portfolio",
+    "name": "ReCode",
     "image": "/assets/recode.png",
     "description": "A ai based project guess the time complexity of the code snippet.",
     "tags": ["next", "css-modules"],
